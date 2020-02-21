@@ -1,0 +1,16 @@
+<h1>{{username}}</h1><br>
+
+<form action="uploadimage" enctype="multipart/form-data" method="POST">
+    {% csrf_token %}
+    <input type="file" name="filename"/>
+    <input type="submit" value="사진전송">
+    <input type="hidden" name="username" value="{{username}}">
+</form>
+
+
+{% for d in datas %}
+
+<img src="/static/face/beek06/{{d.filename}}" width='150' height="100">
+
+{% endfor %}
+

@@ -1,6 +1,6 @@
 from django.contrib import admin
-from ajax.models import User
+from loka.models import Post
 
 # Register your models here.
 
-admin.site.register(User)
+admin.site.register(Post)

@@ -1,0 +1,31 @@
+user List <button id="add">+</button><br>
+{% for d in data %}
+
+    이름 {{d.name}} age {{d.age}} <a href="listuser?userid={{d.userid}}">delete</a> <br>
+
+{% endfor %}
+<br>
+<h1>검색기능</h1>
+<form action="listuser">
+    <input type="text" name="q">
+    <input type="submit" value="search">
+</form>
+
+<br>
+<h1>유저 추가</h1>
+<div id="layer">
+<form action="listuser" method="post">
+    {% csrf_token %}
+    <input type="text" name="userid">
+    <input type="text" name="name">
+    <input type="text" name="age">
+    <input type="text" name="hobby">
+    <input type="submit" name="+">    
+</form>
+</div>
+<script>
+    $("#layer").hide()
+    $("#add").click(function(){
+        $("#layer").toggle()
+    });
+</script>

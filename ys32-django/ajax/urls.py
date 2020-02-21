@@ -10,9 +10,14 @@ urlpatterns = [
     path('loginform', views.loginForm),
     path('login', views.login),
 
-    path('uploadform', views.uploadForm),
-    path('upload', views.upload),
+    # path('uploadform', views.uploadForm),
+    # path('upload', views.upload),
+
+    path('uploadimageForm', views.uploadimageForm),
+    path('uploadimage', views.uploadimage),
 
     path('runpythonform', views.runpythonForm),
     path('runpython', views.runpython),
+
+    path('listuser', views.listUser),
 ] 

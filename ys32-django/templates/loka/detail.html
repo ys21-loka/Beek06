@@ -1,0 +1,11 @@
+{% extends 'loka/base.html' %}
+
+{% block content %}
+
+    <h2>Detail post</h2><br>
+
+    {{form.as_p}}
+
+    <a href="{% url 'edit' pk 'edit' %}">수정</a>
+
+{% endblock%}

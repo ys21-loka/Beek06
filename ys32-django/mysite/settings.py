@@ -37,7 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'ajax.apps.AjaxConfig'
+    'ajax.apps.AjaxConfig',
+    'loka.apps.LokaConfig',
+    'django_extensions',
+    'munich.apps.MunichConfig',
+    'bookmark.apps.BookmarkConfig',
+
 ]
 
 MIDDLEWARE = [
